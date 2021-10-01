@@ -32,22 +32,25 @@ namespace OWML.ModHelper.Menus
 			ModsMenu = modsMenu;
 			PopupManager = popupManager;
 
-			//events.Subscribe<SettingsManager>(Events.AfterStart);
-			//events.Subscribe<TitleScreenManager>(Events.AfterStart);
+			events.Subscribe<SettingsManager>(Events.AfterStart);
+			events.Subscribe<TitleScreenManager>(Events.AfterStart);
 			events.Event += OnEvent;
 		}
 
 		private void OnEvent(MonoBehaviour behaviour, Events ev)
 		{
+			_console.WriteLine("ModMenus.OnEvent activated", MessageType.Message);
 			if (behaviour is SettingsManager settingsManager &&
 				ev == Events.AfterStart &&
 				settingsManager.name == "PauseMenuManagers")
 			{
+				_console.WriteLine("ModMenus.OnEvent PauseMenuManagers", MessageType.Message);
 				InitPauseMenu(settingsManager);
 			}
 			else if (behaviour is TitleScreenManager titleScreenManager &&
 					 ev == Events.AfterStart)
 			{
+				_console.WriteLine("ModMenus.OnEvent TitleScreenManager", MessageType.Message);
 				InitMainMenu(titleScreenManager);
 			}
 		}

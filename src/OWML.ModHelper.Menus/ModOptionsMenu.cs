@@ -41,10 +41,11 @@ namespace OWML.ModHelper.Menus
 			{
 				var tabMenu = new ModTabMenu(this, Console);
 				tabMenu.Initialize(tabButton);
+				Console.WriteLine($"ModOptionsMenu.Initialize: found {tabMenu.TabButton.name}", MessageType.Message);
 				_tabMenus.Add(tabMenu);
 			}
 
-			GameplayTab = GetTab("Button-GamePlay");
+			GameplayTab = GetTab("Button-GamePlayOG");
 			AudioTab = GetTab("Button-Audio");
 			InputTab = GetTab("Button-Input");
 			GraphicsTab = GetTab("Button-Graphics");

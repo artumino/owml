@@ -1,6 +1,8 @@
 ﻿using OWML.Common;
+using OWML.Common.Menus;
 using OWML.ModHelper;
 using OWML.ModHelper.Events;
+using OWML.ModHelper.Menus;
 using OWML.Logging;
 using OWML.ModHelper.Assets;
 using OWML.Abstractions;
@@ -56,16 +58,16 @@ namespace OWML.ModLoader
 				.Add<IModSceneEvents, ModSceneEvents>()
 				.Add<IModEvents, ModEvents>()
 				.Add<IModStorage, ModStorage>()
-				//  .Add<IModConfigMenuBase, OwmlConfigMenu>()
-				// .Add<IModTabbedMenu, ModOptionsMenu>()
-				// .Add<IModMainMenu, ModMainMenu>()
-				// .Add<IModPauseMenu, ModPauseMenu>()
-				// .Add<IModsMenu, ModsMenu>()
-				// .Add<IModInputMenu, ModInputMenu>()
-				// .Add<IModMessagePopup, ModMessagePopup>()
-				// .Add<IModPopupManager, ModPopupManager>()
-				// .Add<IModMenus, ModMenus>()
-				.Add<IObjImporter, ObjImporter>()
+                .Add<IModConfigMenuBase, OwmlConfigMenu>()
+                .Add<IModTabbedMenu, ModOptionsMenu>()
+                .Add<IModMainMenu, ModMainMenu>()
+                .Add<IModPauseMenu, ModPauseMenu>()
+                .Add<IModsMenu, ModsMenu>()
+                .Add<IModInputMenu, ModInputMenu>()
+                .Add<IModMessagePopup, ModMessagePopup>()
+                .Add<IModPopupManager, ModPopupManager>()
+                .Add<IModMenus, ModMenus>()
+                .Add<IObjImporter, ObjImporter>()
 				.Add<IProcessHelper, ProcessHelper>()
 				.Add<Owo>();
 		}

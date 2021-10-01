@@ -71,7 +71,7 @@ namespace OWML.ModHelper.Menus
 			options.OnClosed += () => OnDeactivateOptions(options);
 			
 			var toggleTemplate = options.InputTab.ToggleInputs[0].Copy().Toggle;
-			var rebindMenuTemplate = options.RebindingMenu.Copy().Menu;
+			//var rebindMenuTemplate = options.RebindingMenu.Copy().Menu;
 		}
 
 		private IModPopupMenu CreateModsMenu(IModTabbedMenu options)
