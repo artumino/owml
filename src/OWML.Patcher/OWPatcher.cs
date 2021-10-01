@@ -42,6 +42,9 @@ namespace OWML.Patcher
 				"OWML.Logging.dll",
 				"OWML.Utils.dll",
 				"OWML.Abstractions.dll",
+				"Mono.Cecil.dll",
+				"MonoMod.RuntimeDetour.dll",
+				"MonoMod.Utils.dll",
 				//"Newtonsoft.Json.dll",
 				//"System.Runtime.Serialization.dll",
 				"0Harmony.dll",
@@ -94,7 +97,7 @@ namespace OWML.Patcher
 			if (uncopiedFilesToRoot.Any())
 			{
 				_writer.WriteLine("Warning - Failed to copy the following files to root :", MessageType.Warning);
-				uncopiedFiles.ForEach(file => _writer.WriteLine($"* {file}", MessageType.Warning));
+				uncopiedFilesToRoot.ForEach(file => _writer.WriteLine($"* {file}", MessageType.Warning));
 			}
 		}
 	}
