@@ -15,7 +15,7 @@
 
   <ItemGroup>
     <Reference Include="Newtonsoft.Json">
-      <HintPath>..\..\..\..\..\..\..\Program Files (x86)\Steam\steamapps\common\Outer Wilds\OuterWilds_Data\Managed\Newtonsoft.Json.dll</HintPath>
+      <HintPath>E:\Steam\steamapps\common\Outer Wilds\OuterWilds_Data\Managed\Newtonsoft.Json.dll</HintPath>
     </Reference>
   </ItemGroup>
 
